@@ -1,7 +1,7 @@
 import { API } from "../../backend";
 
 export const getProducts = () => {
-    return fetch(`${API}/products`, {
+    return fetch(`/products`, {
         method : "GET",
     })
     .then(response => {
