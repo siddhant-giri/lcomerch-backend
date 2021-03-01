@@ -64,10 +64,9 @@ app.use("/api", paymentBRoutes);
 const port = process.env.PORT || 8000;
 
 if(process.env.NODE_ENV === "production"){
-app.use(express.static("projectfrontend/build"));
-const path = require("path");
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,'projectfrontend','build','index.html'))
+app.use(express.static(path.join(__dirname, '/projectfrontend/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'projectfrontend', 'build', 'index.html'))
 })
 }
 
