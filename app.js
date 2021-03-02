@@ -31,6 +31,7 @@ mongoose.connect(process.env.DATABASE,
     useCreateIndex : true
 
 }).then(() => {
+    
     console.log("DB CONNECTED");
 }).catch(()=>{
     console.log("DB GOT OOPS");
